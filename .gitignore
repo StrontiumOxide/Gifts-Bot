@@ -1,0 +1,4 @@
+*.pyc
+venv/
+utils/tokens.py
+bot_log.log
