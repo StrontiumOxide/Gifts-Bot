@@ -8,7 +8,7 @@ from utils.loader_token import Token
 from main_logic_bot.main import main_polling
 from periodic_app.main import planned_machine
 
-logging.basicConfig(level=logging.ERROR, filename='bot_log.log', filemode='a', encoding='utf-8')
+# logging.basicConfig(level=logging.ERROR, filename='bot_log.log', filemode='a', encoding='utf-8')
 
 
 async def main():
@@ -20,7 +20,7 @@ async def main():
     try:
             # Уведомление о запуске Telegram-бота
         await bot.send_message(
-            chat_id=Token(key='MY_ID').find(),
+            chat_id=Token(key='HIS_ID').find(),
             text='<b>[INFO] Telegram-бот запущен!</b>'
         )
     except Exception:
