@@ -9,6 +9,10 @@ async def set_commands(bot: Bot) -> None:
         BotCommand(
             command="start",
             description="Запуск бота ▶️"
+        ),
+        BotCommand(
+            command="get_vishlist",
+            description="Получить виш-лист 📋"
         )
     ]
 
