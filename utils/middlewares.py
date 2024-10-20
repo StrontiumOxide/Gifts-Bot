@@ -37,9 +37,14 @@ class CountMiddleware(BaseMiddleware):
 Повторите пожалуйста позже ⏳
 </blockquote>
 '''
-                await event.message.answer(
-                    text=text
-                )
+                if event.message:
+                    await event.message.answer(
+                        text=text
+                    )
+                elif event.callback_query:
+                    await event.callback_query.message.answer(
+                        text=text
+                    )
             return
         
         await handler(event, data)

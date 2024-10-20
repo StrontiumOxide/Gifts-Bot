@@ -3,7 +3,7 @@ from utils.commands_bot import set_commands
 
 from utils.middlewares import CountMiddleware, StopStrangerMiddleware
 from main_logic_bot.greetings import message_greetings
-from main_logic_bot.vishlist import message_vishlist
+from main_logic_bot.vishlist import message_vishlist, callback_query_vishlist, message_vishlist_funnel
 
 
 async def main_polling(bot: Bot, dp: Dispatcher) -> None:
@@ -20,7 +20,9 @@ async def main_polling(bot: Bot, dp: Dispatcher) -> None:
         message_greetings,
 
             # Виш-лист
-        message_vishlist
+        message_vishlist,
+        callback_query_vishlist,
+        message_vishlist_funnel
 
     ]
 
